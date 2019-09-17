@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/index-styles.css">
+    <!--<link rel="stylesheet" href="./css/index-styles.css">-->
     <script src="https://kit.fontawesome.com/f95d0c8fa1.js"></script>
     <link rel="stylesheet" href="styles.css">
 
@@ -19,24 +18,39 @@
 </head>
 
 <body>
-    <h1>Hi There,</h1>
-    <P>Log in to your account</P>
-    <div class="table">
-        <form action="./action.php" class="label">
-            <label for="Username" id="name1">Username</label><br>
-            <input pattern=".{4,20}" type="text" name="name" id="Name" placeholder="Username/emaill" required title="4 to 20 characters"><br>
-            <label for="Password" id="name2">Password</label><br>
-            <input pattern=".{6,24}" type="varchar" name="email" id="email" placeholder="Password" required><br>
-            <input type="checkbox" name="Remember me" value="RememberMe">Remember me<br>
-            <a href="#" alt="Link to forgot Password">Forgot Password</a>
-            <button type="submit" class="submit" value="check" id="submit">Login</button>
-            <p>Don't have an account</p>
-            <a href="#" alt="Sign Up">Sign Up</a>
-        </form>
-        
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <div class="split right">
+        <div class="centered">
+            <img src="./356662fd1a0c7c3d5e97354eb63ffac4.jpg" alt="Phone background" class="img">
+
+        </div>
+    </div>
+    <div class="split left">
+        <div class="centered2">
+
+            <img src=" https://res.cloudinary.com/asnas/image/upload/v1568664568/Screen_Shot_2019-09-16_at_2.21.09_PM_frqhj8.png" id="img1" alt="Project-paradise-logo">
+            <p class="phoneparadise">Phone</p>
+            <p class="phoneparadise1">Paradise</p>
+            <h1 class="head">Hi There,</h1>
+            <P class="login">Log in to your account</P>
+            <div class="table">
+                <form action="./action.php" class="label">
+                    <label for="Username" id="name1">Username</label><br>
+                    <input pattern=".{4,20}" type="text" name="name" id="Name" placeholder="Username/emaill" required title="4 to 20 characters"><br>
+                    <label for="Password" id="name2">Password</label><br>
+                    <input pattern=".{6,24}" type="varchar" name="email" id="email" placeholder="Password" required><br>
+                    <input type="checkbox" name="Remember me" id="checkbox" value="RememberMe">
+                    <h6 id="checkbox1">Remember me</h6><br>
+                    <a href="#" alt="Link to forgot Password" id="forgotme">Forgot Password</a>
+                    <button type="submit" class="submit" value="check" id="submit">Login</button>
+                    <section class="account">
+                        Don't have an account
+                        <a href="#" alt="Sign Up">Sign Up</a>
+                    </section>
+                </form>
+            </div>
+        </div>
 </body>
 
 </html>
