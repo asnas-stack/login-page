@@ -1,232 +1,63 @@
-                                                    /* Split the screen in half */
-                                                    
-                                                    .split {
-                                                        height: 100%;
-                                                        width: 50%;
-                                                        position: fixed;
-                                                        z-index: 1;
-                                                        top: 0;
-                                                        overflow-x: hidden;
-                                                        padding-top: 20px;
-                                                    }
-                                                    /* Control the left side */
-                                                    
-                                                    .left {
-                                                        left: 0;
-                                                        background-color: #ffffff;
-                                                    }
-                                                    /* Control the right side */
-                                                    
-                                                    .right {
-                                                        right: 0;
-                                                        background-color: rgba(8, 8, 8, 0.945);
-                                                    }
-                                                    /* If you want the content centered horizontally and vertically */
-                                                    
-                                                    .centered {
-                                                        position: absolute;
-                                                        top: 50%;
-                                                        left: 50%;
-                                                        transform: translate(-50%, -50%);
-                                                        text-align: center;
-                                                    }
-                                                    
-                                                    .img {
-                                                        width: 800px;
-                                                        opacity: 25%;
-                                                        height: 450px;
-                                                        size: 100%;
-                                                        bottom: 17.4%;
-                                                    }
-                                                    
-                                                    .head {
-                                                        position: absolute;
-                                                        left: 26.99%;
-                                                        right: 34.85%;
-                                                        top: 12%;
-                                                        bottom: 88.5%;
-                                                        font-family: Poppins;
-                                                        font-style: normal;
-                                                        font-weight: bold;
-                                                        font-size: 50px;
-                                                        line-height: 75px;
-                                                        text-align: center;
-                                                        letter-spacing: -0.5px;
-                                                        color: #000000;
-                                                    }
-                                                    
-                                                    .login {
-                                                        position: absolute;
-                                                        left: 18.37%;
-                                                        right: 28.24%;
-                                                        top: 21.29%;
-                                                        bottom: 78.81%;
-                                                        font-family: Poppins;
-                                                        font-style: normal;
-                                                        font-weight: normal;
-                                                        font-size: 30px;
-                                                        line-height: 45px;
-                                                        text-align: center;
-                                                        letter-spacing: -0.5px;
-                                                        color: #000000;
-                                                    }
-                                                    
-                                                    .phoneparadise {
-                                                        position: absolute;
-                                                        left: 0;
-                                                        right: 29.02%;
-                                                        top: 1.33%;
-                                                        bottom: 80.09%;
-                                                        font-family: Poppins;
-                                                        font-style: normal;
-                                                        font-weight: 900;
-                                                        font-size: 50px;
-                                                        line-height: 75px;
-                                                        text-align: center;
-                                                        letter-spacing: -0.5px;
-                                                        color: #B9A700;
-                                                        transform: rotate(0.18deg);
-                                                    }
-                                                    
-                                                    .phoneparadise1 {
-                                                        position: absolute;
-                                                        left: 23.94%;
-                                                        right: 18.02%;
-                                                        top: 1.33%;
-                                                        bottom: 80.09%;
-                                                        font-family: Poppins;
-                                                        font-style: normal;
-                                                        font-weight: 900;
-                                                        font-size: 50px;
-                                                        line-height: 75px;
-                                                        text-align: center;
-                                                        letter-spacing: -0.5px;
-                                                        color: #B900B6;
-                                                        transform: rotate(0.18deg);
-                                                    }
-                                                    
-                                                    #Name,
-                                                    #name1 {
-                                                        position: absolute;
-                                                        left: 10.88%;
-                                                        right: 10.74%;
-                                                        top: 32.65%;
-                                                        bottom: 61.35%;
-                                                        width: 40rem;
-                                                        height: 3rem;
-                                                        align-items: center;
-                                                        align-content: center;
-                                                        box-sizing: border-box;
-                                                        border: 2px solid #B900B6;
-                                                    }
-                                                    
-                                                    #email,
-                                                    #name2 {
-                                                        position: absolute;
-                                                        left: 10.88%;
-                                                        right: 10.74%;
-                                                        top: 40.13%;
-                                                        bottom: 43.87%;
-                                                        width: 40rem;
-                                                        height: 3rem;
-                                                        align-items: center;
-                                                        align-content: center;
-                                                        box-sizing: border-box;
-                                                        border: 2px solid #B900B6;
-                                                    }
-                                                    
-                                                    #checkbox {
-                                                        position: absolute;
-                                                        left: 10.88%;
-                                                        right: 84.99%;
-                                                        top: 50.5%;
-                                                        bottom: 32.67%;
-                                                        background: #FFFFFF;
-                                                        border: #000000;
-                                                        box-sizing: border-box;
-                                                        border-radius: 5px;
-                                                    }
-                                                    
-                                                    #checkbox1 {
-                                                        position: absolute;
-                                                        left: 2.95%;
-                                                        right: 62.26%;
-                                                        top: 44%;
-                                                        bottom: 32.06%;
-                                                        font-family: Poppins;
-                                                        font-style: normal;
-                                                        font-weight: normal;
-                                                        font-size: 22px;
-                                                        line-height: 33px;
-                                                        text-align: center;
-                                                        letter-spacing: -0.5px;
-                                                        color: #000000;
-                                                    }
-                                                    
-                                                    #forgotme {
-                                                        position: absolute;
-                                                        left: 53.5%;
-                                                        right: 10.74%;
-                                                        top: 49.9%;
-                                                        bottom: 32.06%;
-                                                        font-family: Poppins;
-                                                        font-style: normal;
-                                                        font-weight: normal;
-                                                        font-size: 22px;
-                                                        line-height: 33px;
-                                                        text-align: center;
-                                                        letter-spacing: -0.5px;
-                                                        color: #B900B6;
-                                                    }
-                                                    
-                                                    #submit {
-                                                        position: absolute;
-                                                        left: 15.8%;
-                                                        right: 25.04%;
-                                                        top: 60.68%;
-                                                        bottom: 32.59%;
-                                                        background: #B900B6;
-                                                        border-radius: 30px;
-                                                        align-items: center;
-                                                        align-content: center;
-                                                        font-family: Poppins;
-                                                        font-style: normal;
-                                                        font-weight: 600;
-                                                        font-size: 25px;
-                                                        line-height: 37px;
-                                                        /* identical to box height */
-                                                        text-align: center;
-                                                        letter-spacing: -0.5px;
-                                                        color: #FFFFFF;
-                                                    }
-                                                    
-                                                    #submit:hover {
-                                                        background: linear-gradient(to bottom, black 5%, black 100%);
-                                                        background-color: black;
-                                                    }
-                                                    
-                                                    .account {
-                                                        position: absolute;
-                                                        left: 15.86%;
-                                                        right: 26.86%;
-                                                        top: 67.03%;
-                                                        bottom: 3.91%;
-                                                        font-family: Poppins;
-                                                        font-style: normal;
-                                                        font-weight: normal;
-                                                        font-size: 22px;
-                                                        line-height: 33px;
-                                                        text-align: center;
-                                                        letter-spacing: -0.5px;
-                                                        color: #000000;
-                                                    }
-                                                    
-                                                    #img1 {
-                                                        position: absolute;
-                                                        width: 68px;
-                                                        height: 66px;
-                                                        left: 200px;
-                                                        top: 72px;
-                                                        align-content: center;
-                                                        align-items: center;
-                                                    }
+html,
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: #171717;
+}
+
+a {
+    color: #E11ECE;
+}
+
+a:hover {
+    color: #E11ECE;
+    text-decoration: none;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.left-side {
+    font-family: 'poppins', sans-serif;
+    background-color: #fff;
+    text-align: center;
+}
+
+.left-header {
+    padding-top: 15vh;
+}
+
+.login-form {
+    padding-bottom: 26.5vh;
+}
+
+.signup-form {
+    padding-bottom: 17.5vh;
+}
+
+.left-header h1 {
+    color: #B9A700;
+}
+
+.left-header span {
+    color: #E11ECE;
+}
+
+.btn-custom {
+    background-color: #E11ECE;
+    color: #fff;
+    margin-top: 3vh;
+}
+
+.btn-custom:hover {
+    color: #fff;
+}
+
+.account {
+    padding-top: 5vh;
+}
+
+.login-image {
+    padding-top: 15vh;
+}
