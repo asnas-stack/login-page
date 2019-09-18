@@ -1,3 +1,5 @@
+<?php include "includes\db.php";  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,8 +17,75 @@
 
 
 </head>
-
 <body>
+<?php
+    if (isset($_POST['signUp'])) {
+
+    $username  = $_POST['username'];
+    $password  = $_POST['password'];
+    $email  =    $_POST['email'];
+    $confirmPassword = $_POST['confirmPassword'];
+
+
+    $hashFormat = "$2y$10$";
+    $salt = "iusesomecrazystrings22";
+    $hashFormat_and_salt = $hashFormat . $salt;
+    $user_password = crypt($password, $hashFormat_and_salt);
+
+    if($password !== $confirmPassword){
+
+        header("Location: includes/404.php");
+       die();
+
+
+
+    }
+
+
+
+    $query = "INSERT INTO users(username,password, email ) ";
+
+    $query .= "VALUES('{$username}','{$user_password}','{$email}') ";
+    $Signup_user_query = mysqli_query($connection,$query);
+
+    if($Signup_user_query){
+
+
+        header("Location: login.php");
+        }else{
+        ?>
+        <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Error! Refill form </strong>
+        </div>
+
+        <?php
+
+    }
+
+    }
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="container-fluid full-height">
         <div class="row">
             <div class="col-md-6 left-side">
@@ -31,22 +100,22 @@
                     <form action="" method="POST">
                         <div class="form-group col-md-10 mx-auto">
 
-                            <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
                         </div>
                         <div class="form-group col-md-10 mx-auto">
 
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
                         </div>
                         <div class="form-group col-md-10 mx-auto">
 
-                            <input type="password" class="form-control" id="pwd" name="password" placeholder="Password">
+                            <input type="password" class="form-control" id="pwd" name="password" placeholder="Password" required>
                         </div>
                         <div class="form-group col-md-10 mx-auto">
 
-                            <input type="password" class="form-control" id="pwd" name="password" placeholder="Re-Enter Password">
+                            <input type="password" class="form-control" id="pwd" required name="confirmPassword" placeholder="Re-Enter Password">
                         </div>
-                        <button type="submit" class="btn btn-custom py-2 px-5">SIGN UP</button>
-                        <p class="account">Already have an account? <a href="index.html">Login</a></p>
+                        <button type="submit" name= "signUp" class="btn btn-custom py-2 px-5">SIGN UP</button>
+                        <p class="account">Already have an account? <a href="login.php">Login</a></p>
                     </form>
                 </div>
             </div>

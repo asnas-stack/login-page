@@ -1,3 +1,8 @@
+<?php ob_start(); ?>
+<?php session_start(); ?>
+<?php include "includes\db.php";  ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,6 +35,9 @@
 
 </head>
 
+
+
+
 <body>
     <nav class="navbar navbar-expand-sm bg-custom navbar-custom">
         <a class="navbar-brand" href="#">
@@ -41,13 +49,43 @@
         </form>
         <ul class="navbar-nav">
             <li class="nav-item ml-2 mr-2">
-                <a class="nav-link" href="#"> <i class="fa fa-user-circle"></i> Hi, User</a>
+                <a class="nav-link" href="#"> <i class="fa fa-user-circle"></i>
+
+                    <?php
+
+                    if (isset( $_SESSION['username'])) {
+                        echo  "Hi" ." " . $_SESSION['username'] . "!";
+                    }else{
+                        echo  "Hi User!";
+                    }
+                    ?>
+
+
+
+                </a>
             </li>
             <li class="nav-item ml-2 mr-2">
                 <a class="nav-link" href="#"> <i class="fa fa-question-circle"></i> Help</a>
             </li>
             <li class="nav-item ml-2 mr-2">
                 <a class="nav-link" href="#"> <i class="fa fa-shopping-cart"></i>Cart</a>
+            </li>
+            <li class="nav-item ml-2 mr-2">
+                <?php
+
+                if (isset( $_SESSION['username'])) {    ?>
+                    <a class="nav-link" href="signout.php"> <i class="<?php echo 'fa fa-sign-out' ?>"></i>Sign Out</a>
+                <?php
+                }
+                else{
+                ?>
+
+                    <a class="nav-link" href="login.php"> <i class="<?php echo 'fa fa-sign-in' ?>"></i>Log in</a>
+                <?php
+                }
+                ?>
+
+
             </li>
         </ul>
     </nav>

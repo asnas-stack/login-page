@@ -1,3 +1,8 @@
+<?php ob_start(); ?>
+<?php session_start(); ?>
+<?php include "includes\db.php";  ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +21,61 @@
 
 </head>
 
+<?php
+$db_username  = "";
+$db_user_password = "";
+if (isset($_POST['login'])) {
+
+    $username  = $_POST['username'];
+    $password  = $_POST['password'];
+    $username  = mysqli_real_escape_string($connection, $username);
+    $password = mysqli_real_escape_string($connection, $password);
+
+
+    $hashFormat = "$2y$10$";
+    $salt = "iusesomecrazystrings22";
+    $hashFormat_and_salt = $hashFormat . $salt;
+    $user_password = crypt($password, $hashFormat_and_salt);
+
+
+    $query = "SELECT * FROM users WHERE username = '{$username}' ";
+
+    $select_user_query = mysqli_query($connection,$query);
+
+
+    while ($row = mysqli_fetch_array($select_user_query)) {
+
+        $db_user_id  = $row['id'];
+        $db_username  = $row['username'];
+        $db_user_password  = $row['password'];
+
+    }
+
+    if  ($username === $db_username &&  $user_password === $db_user_password) {
+
+        $_SESSION['id']        =    $db_user_id;
+        $_SESSION['username']  =    $db_username ;
+        $_SESSION['password']  =    $db_user_password;
+
+
+        //echo  $_SESSION['username'] ;
+
+       header("Location: index.php");
+
+    }
+    else{
+
+        echo "<h3 style='background-color: indianred; color: white'>Invalid Password or Username</h3>";
+
+
+    }
+
+}
+
+
+
+
+?>
 <body>
     <div class="container-fluid full-height">
         <div class="row">
@@ -31,11 +91,11 @@
                     <form action="" method="POST">
                         <div class="form-group">
 
-                            <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
                         </div>
                         <div class="form-group">
 
-                            <input type="password" class="form-control" id="pwd" name="password" placeholder="Password">
+                            <input type="password" class="form-control" id="pwd" name="password" placeholder="Password" required>
                         </div>
                         <div class="clearfix">
                             <div class="form-group form-check float-left">
@@ -48,8 +108,8 @@
                                 <a href="">Forgot Password?</a>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-custom py-2 px-5">LOGIN</button>
-                        <p class="account">Don't have an account? <a href="signup.html">Sign Up</a></p>
+                        <button type="submit" name= "login" class="btn btn-custom py-2 px-5">LOGIN</button>
+                        <p class="account">Don't have an account? <a href="signup.php">Sign Up</a></p>
                     </form>
                 </div>
             </div>
