@@ -1,22 +1,33 @@
-html, body {
+html,
+body {
     height: 100vh;
     width: 100%;
     background-color: #171717;
 }
+
 a {
     color: #E11ECE;
 }
+
+a:hover {
+    color: #E11ECE;
+    text-decoration: none;
+}
+
 .full-height {
     height: 100%;
 }
+
 .left-side {
     font-family: 'poppins', sans-serif;
     background-color: #fff;
     text-align: center;
 }
+
 .left-header {
     padding-top: 15vh;
 }
+
 .login-form {
     padding-bottom: 26.5vh;
 }
@@ -35,10 +46,29 @@ a {
     margin-top: 3vh;
 }
 
+.btn-custom:hover {
+    color: #fff;
+}
+
 .account {
     padding-top: 5vh;
 }
 
 .login-image {
     padding-top: 15vh;
+}
+
+
+/* Signup Page */
+
+.signup-form {
+    padding-bottom: 17.5vh;
+}
+
+
+/* Home Page */
+
+.navbar-nav li a {
+    color: #000;
+    font-size: 110%;
 }
